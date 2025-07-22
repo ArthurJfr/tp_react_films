@@ -1,69 +1,139 @@
-# React + TypeScript + Vite
+# 🎬 FilmFinder — Application de gestion de films (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+CinéVibe est une application web moderne permettant de :
+- Découvrir les films populaires, à venir, en salle ou les mieux notés grâce à l’API [TMDb](https://www.themoviedb.org/).
+- Rechercher des films, consulter leurs détails, voir la bande-annonce, les acteurs principaux et des films similaires.
+- Ajouter des films à une wishlist personnalisée, persistée dans le navigateur.
+- Profiter d’une interface responsive, sombre, élégante et inspirée du cinéma.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Installation & Lancement
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 1. **Cloner le projet**
+```bash
+git clone https://github.com/ArthurJfr/tp_react_films.git
+cd tp_react_films
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 2. **Installer les dépendances**
+```bash
+npm install
 ```
+
+### 3. **Configurer l’API TMDb**
+- Crée un compte sur [TMDb](https://www.themoviedb.org/).
+- Récupère ta clé API dans ton profil (Settings > API).
+- Crée un fichier `.env` à la racine du projet avec :
+  ```
+  VITE_API_KEY=ta_cle_tmdb
+  VITE_BASE_URL=https://api.themoviedb.org/3
+  ```
+- La clé dans le fichier .env.example est valide
+
+### 4. **Lancer le serveur de développement**
+```bash
+npm run dev
+```
+- L’application sera accessible sur [http://localhost:5173](http://localhost:5173) (ou le port affiché).
+
+### 5. **Build de production**
+```bash
+npm run build
+```
+- Pour prévisualiser le build :
+```bash
+npm run preview
+```
+
+---
+
+## ✨ Fonctionnalités principales
+
+- **Accueil (Hero)** : Présentation immersive, bouton d’accès rapide à la liste des films.
+- **Liste des films** : Catégories dynamiques (populaires, en salle, à venir, mieux notés), recherche avec debounce, pagination avancée.
+- **Détail d’un film** : Affiche résumé, date, note, bande-annonce YouTube, acteurs principaux (avec photo), films similaires.
+- **Wishlist** : Ajout/suppression de films, persistance locale, compteur en temps réel dans la navbar.
+- **Design** : Glassmorphisme, dark mode, responsive mobile, favicon personnalisé.
+- **Footer** : Liens vers GitHub et LinkedIn.
+- **Performance** : Lazy loading des images, centralisation des appels API, code modulaire.
+
+---
+
+## 🛠️ Structure du projet
+
+```
+src/
+  components/
+    FilmCard/
+    FilmNav/
+    MovieList/
+    MovieDetail/
+    WishList/
+    NavBar/
+    Home/
+    Footer/
+  context/
+    WishlistProvider.jsx
+  utils/
+    debounce.js
+  App.jsx
+  index.css
+  main.jsx
+public/
+  favicon.svg
+  ...
+```
+
+---
+
+## 📝 Prérequis
+
+- Node.js >= 16
+- Un navigateur moderne
+- Une clé API TMDb valide
+
+---
+
+## 📚 À propos
+
+Ce projet est un TP complet pour apprendre à :
+- Utiliser React avec Vite et la Context API
+- Consommer une API REST externe (TMDb)
+- Gérer le state global, le localStorage, le responsive et le design moderne
+- Organiser un projet front-end de façon professionnelle
+
+---
+
+## 👤 Auteur
+
+- [ArthurJfr](https://github.com/ArthurJFr)
+- [Arthur JAFFRO](https://www.linkedin.com/in/ton-linkedin/)
+
+---
+
+## 🖼️ Aperçu
+
+### Homepage
+
+![screenshot](public/home.png) 
+
+### Movies
+
+![screenshot](public/movies.png) 
+
+### Details
+
+![screenshot](public/details.png)  
+
+
+
+---
+
+## 📄 Licence
+
+Ce projet est open-source, libre d’utilisation et d’adaptation.
+
+---
+
+> **N’hésite pas à forker, contribuer ou t’inspirer de ce projet pour tes propres applications React !**
