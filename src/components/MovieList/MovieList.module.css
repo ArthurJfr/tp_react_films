@@ -1,0 +1,103 @@
+.container {
+  padding: 2rem;
+  background: #181818;
+  min-height: 100vh;
+}
+.categories {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.categories button {
+  background: #232323;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.categories button:hover,
+.categories button:focus {
+  background: #e50914;
+  color: #fff;
+}
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+justify-content: space-between;
+}
+.card {
+  width: 180px;
+  background: rgba(35, 35, 35, 0.65);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px) saturate(180%);
+  -webkit-backdrop-filter: blur(8px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  transition: box-shadow 0.2s;
+}
+.card:hover {
+  box-shadow: 0 12px 40px #e5091440;
+}
+.poster {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #000a;
+} 
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+.pageBtn {
+  background: #232323;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  font-size: 1rem;
+}
+.pageBtn:disabled {
+  background: #333;
+  color: #888;
+  cursor: not-allowed;
+}
+.activePage {
+  background: #e50914;
+  color: #fff;
+}
+.ellipsis {
+  color: #888;
+  padding: 0 0.5rem;
+  font-size: 1.1rem;
+}
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem 0.2rem;
+  }
+  .movies {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .pagination {
+    gap: 0.1rem;
+    font-size: 0.95rem;
+  }
+  .pageBtn {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.95rem;
+  }
+}

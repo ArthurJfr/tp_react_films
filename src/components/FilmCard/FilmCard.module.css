@@ -1,0 +1,127 @@
+.card {
+  width: 200px;
+  background: rgba(35, 35, 35, 0.75);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  padding: 1.5rem 1rem 1rem 1rem;
+  text-align: center;
+  transition: box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.card:hover {
+  box-shadow: 0 16px 48px #e5091440;
+}
+
+.glow {
+  box-shadow:
+    0 0 8px 2px #21d07a55,
+    0 4px 16px 0 #21d07a33;
+  border: 1.5px solid #21d07a;
+  animation: glowPulse 2.2s infinite alternate;
+}
+
+@keyframes glowPulse {
+  from {
+    box-shadow:
+      0 0 8px 2px #21d07a55,
+      0 4px 16px 0 #21d07a33;
+  }
+  to {
+    box-shadow:
+      0 0 16px 4px #21d07a44,
+      0 8px 24px 0 #21d07a22;
+  }
+}
+
+.poster {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #000a;
+  margin-bottom: 1rem;
+}
+
+.title {
+  color: #fff;
+  font-size: 1.1rem;
+  margin: 0.5rem 0 0.7rem 0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.rating {
+  color: #e50914;
+  font-weight: bold;
+  margin: 0.3rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  justify-content: center;
+}
+
+.likeBtn {
+  background: #e50914;
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.1rem;
+  margin: 0.5rem auto;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #e5091440;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.likeBtn:hover {
+  background: #b0060f;
+  box-shadow: 0 4px 16px #e5091460;
+}
+
+.detailsLink {
+  color: #e50914;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+
+.detailsLink:hover {
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .card {
+    min-width: 80vw;
+    max-width: 100vw;
+    padding: 1rem 0.5rem;
+    margin-bottom: 1.2rem;
+  }
+  .poster {
+    border-radius: 10px;
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto 1rem auto;
+  }
+  .title {
+    font-size: 1rem;
+  }
+  .rating {
+    font-size: 0.95rem;
+  }
+  .likeBtn {
+    width: 44px;
+    height: 44px;
+    font-size: 1.3rem;
+  }
+}

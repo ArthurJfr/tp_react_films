@@ -1,0 +1,80 @@
+.container {
+  padding: 2rem;
+  min-height: 100vh;
+  background: transparent;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: flex-start;
+}
+.card {
+  width: 200px;
+  background: rgba(35, 35, 35, 0.75);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  padding: 1.5rem 1rem 1rem 1rem;
+  text-align: center;
+  transition: box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card:hover {
+  box-shadow: 0 16px 48px #e5091440;
+}
+.poster {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #000a;
+  margin-bottom: 1rem;
+}
+.card h3 {
+  color: #fff;
+  font-size: 1.1rem;
+  margin: 0.5rem 0 0.7rem 0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.card button {
+  background: #e50914;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1.2rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px #e5091440;
+  transition: background 0.2s, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.card button:hover {
+  background: #b0060f;
+  box-shadow: 0 4px 16px #e5091460;
+}
+.card a {
+  color: #e50914;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+.card a:hover {
+  color: #fff;
+} 
+
+@media (max-width: 600px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+  }
+} 
