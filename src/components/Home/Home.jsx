@@ -9,7 +9,7 @@ const Home = () => {
     <section className={styles.hero}>
       <div className={styles.heroContent}>
         <h1 className={styles.title}>
-          🎬 Bienvenue sur <span className={styles.brand}>CinéVibe</span>
+          🎬 Bienvenue sur <span className={styles.brand}>FilmFinder</span>
         </h1>
         <p className={styles.subtitle}>
           Découvrez, notez et ajoutez vos films préférés à votre liste de souhaits.<br />

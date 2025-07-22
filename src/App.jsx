@@ -4,6 +4,7 @@ import Navbar from './components/NavBar/Navbar';
 import MovieList from './components/MovieList/MovieList';
 import MovieDetail from './components/MovieDetail/MovieDetail';
 import Wishlist from './components/WishList/Wishlist';
+import Home from './components/Home/Home';
 
 const App = () => {
   return (
