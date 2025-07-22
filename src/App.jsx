@@ -5,6 +5,7 @@ import MovieList from './components/MovieList/MovieList';
 import MovieDetail from './components/MovieDetail/MovieDetail';
 import Wishlist from './components/WishList/Wishlist';
 import Home from './components/Home/Home';
+import Footer from './components/Footer/Footer';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/movie/:id" element={<MovieDetail />} />
           <Route path="/wishlist" element={<Wishlist />} />
         </Routes>
+        <Footer />
       </Router>
     </WishlistProvider>
   );

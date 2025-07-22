@@ -14,7 +14,7 @@ const Navbar = () => {
         <Link to="/" style={{ color: '#fff', textDecoration: 'none', fontWeight: 'bold', fontSize: '1.2rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
           <FontAwesomeIcon icon={faCameraRetro} /> FilmFinder
         </Link>
-        <Link to="/" style={{ color: '#fff', textDecoration: 'none', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+        <Link to="/movies" style={{ color: '#fff', textDecoration: 'none', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
           <FontAwesomeIcon icon={faFilm} /> Films
         </Link>
         <Link to="/wishlist" style={{ color: '#fff', textDecoration: 'none', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>

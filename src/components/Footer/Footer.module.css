@@ -1,0 +1,41 @@
+.footer {
+  background: #181818;
+  color: #b3b3b3;
+  padding: 1rem 0 1rem 0;
+  text-align: center;
+  border-top: 1.5px solid #232323;
+}
+
+.socials {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.iconLink {
+  color: #b3b3b3;
+  font-size: 2rem;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.iconLink:hover,
+.iconLink:focus {
+  color: #e50914;
+  transform: scale(1.15);
+}
+
+.copy {
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 1.2rem 0 0.7rem 0;
+    font-size: 0.95rem;
+  }
+  .iconLink {
+    font-size: 1.5rem;
+  }
+}
